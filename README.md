@@ -33,14 +33,19 @@ An example usage ready to be copy-pasted for you to start learning how to use th
 
     def random_bool_list(size):
         return [random.randint(0, 1) for _ in range(size)]
+        
     def count_ones(lst):
         return lst.count(1)
+        
     plot_benchmark(count_ones,
                    range(1, 1000, 10),
                    input_generator=random_bool_list,
                    tries=10)
+                   
+                   
     def all_pairs(lst):
         return [(x, y) for x in lst for y in lst]
+        
     plot_benchmark(all_pairs,
                    range(1, 500, 1),
                    input_generator=random_bool_list,
